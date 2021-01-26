@@ -1,6 +1,11 @@
 'use strict';
 
-const popupReg = document.querySelector('.popup-reg');
+import {substitutionValueRange} from '../cost/cost';
+import {popupFormSubmit} from '../footer/footer';
+import {format} from '../format/format';
+import {info} from '../info/info';
+
+export const popupReg = document.querySelector('.popup-reg');
 const closePopupBtn = popupReg.querySelector('.popup-reg__close');
 const useElements = popupReg.querySelectorAll('.outline-none');
 const labels = popupReg.querySelectorAll('label');
@@ -21,7 +26,7 @@ function activeElement() {
     labels.forEach(label => {
         label.addEventListener('keydown', (evt) => {
             if (evt.code === 'Enter') {
-                const inp = popupReg.querySelector(`[id="${label.getAttribute('for')}"]`);
+                const inp = popupReg.querySelector(`[id='${label.getAttribute('for')}']`);
                 if (inp.type === 'checkbox') {
                     inp.toggleAttribute('checked');
                 } else if (inp.type === 'radio') {
@@ -41,3 +46,7 @@ closePopupBtn.addEventListener('keydown', (evt) => {
 
 removeOutline();
 activeElement();
+info();
+format();
+substitutionValueRange();
+popupFormSubmit();

@@ -1,4 +1,4 @@
-@import "./varaibles";
+@import "../services/varaibles";
 
 @media (max-width: 375px) {
     body {
@@ -24,18 +24,20 @@
 
     .popup-reg {
         max-width: 344px;
+        margin: 80px auto;
         padding: 24px;
 
-        h1 {
+        .h1 {
             font: {
                 size: 32px;
                 weight: 900;
             }
             margin-bottom: 60px;
         }
+        
         fieldset {
             legend,
-            .popup-reg__format__label {
+            .format__label {
                 font-size: 12px;
                 line-height: 16px;
             }
@@ -46,33 +48,62 @@
             left: calc(100% - 30px);
         }
 
-        .popup-reg__masterClass {
+        .popupThanks {
+            padding: 19px 20px 32px 0px;
+
+            .h1 {
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin-bottom: 35px;
+            }
+        }
+
+        .masterClass {
             margin-bottom: 28px;
         }
 
-        .popup-reg__time {
+        .time {
             margin-bottom: 40px;
         }
 
-        .popup-reg__format {
+        .format {
             margin-bottom: 36px;
         }
     }
 
-    .popup-reg__info {
-        .popup-reg__select,
-        .popup-reg__name,
-        .popup-reg__phone {
+    .info {
+        input,
+        textarea {
+            font-size: inherit;
+            line-height: inherit;
+        }
+        
+        .info__select,
+        .info__name,
+        .info__phone {
             margin-bottom: 55px;
         }
 
-        .popup-reg__comment {
+        .info__comment {
             margin-bottom: 28px;
+        }
+
+        .info__title_min {
+            padding-bottom: 0 !important;
+            font-size: 12px;
+            line-height: 26px;
+        }
+    
+        .info__input_max {
+            height: 36px;
+            line-height: 32px;
         }
     }
 
-    .popup-reg__masterClass,
-    .popup-reg__time {
+    .masterClass,
+    .time {
         label {
             &::before {
                 top: 0;
@@ -80,9 +111,11 @@
         }
     }
 
-    .popup-reg__masterClass {
-        label::after {
-            top: 48%;
+    .masterClass {
+        label{
+            &::after {
+                top: 48%;
+            }
         }
     }
 

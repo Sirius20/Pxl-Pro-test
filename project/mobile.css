@@ -36,15 +36,16 @@
   }
   .popup-reg {
     max-width: 344px;
+    margin: 80px auto;
     padding: 24px;
   }
-  .popup-reg h1 {
+  .popup-reg .h1 {
     font-size: 32px;
     font-weight: 900;
     margin-bottom: 60px;
   }
   .popup-reg fieldset legend,
-  .popup-reg fieldset .popup-reg__format__label {
+  .popup-reg fieldset .format__label {
     font-size: 12px;
     line-height: 16px;
   }
@@ -52,28 +53,51 @@
     top: 0px;
     left: calc(100% - 30px);
   }
-  .popup-reg .popup-reg__masterClass {
+  .popup-reg .popupThanks {
+    padding: 19px 20px 32px 0px;
+  }
+  .popup-reg .popupThanks .h1 {
+    margin-bottom: 20px;
+  }
+  .popup-reg .popupThanks p {
+    margin-bottom: 35px;
+  }
+  .popup-reg .masterClass {
     margin-bottom: 28px;
   }
-  .popup-reg .popup-reg__time {
+  .popup-reg .time {
     margin-bottom: 40px;
   }
-  .popup-reg .popup-reg__format {
+  .popup-reg .format {
     margin-bottom: 36px;
   }
-  .popup-reg__info .popup-reg__select,
-  .popup-reg__info .popup-reg__name,
-  .popup-reg__info .popup-reg__phone {
+  .info input,
+  .info textarea {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .info .info__select,
+  .info .info__name,
+  .info .info__phone {
     margin-bottom: 55px;
   }
-  .popup-reg__info .popup-reg__comment {
+  .info .info__comment {
     margin-bottom: 28px;
   }
-  .popup-reg__masterClass label::before,
-  .popup-reg__time label::before {
+  .info .info__title_min {
+    padding-bottom: 0 !important;
+    font-size: 12px;
+    line-height: 26px;
+  }
+  .info .info__input_max {
+    height: 36px;
+    line-height: 32px;
+  }
+  .masterClass label::before,
+  .time label::before {
     top: 0;
   }
-  .popup-reg__masterClass label::after {
+  .masterClass label::after {
     top: 48%;
   }
   .popup-reg__footer {
@@ -98,4 +122,3 @@
     line-height: 16px;
   }
 }
-/*# sourceMappingURL=mobile.css.map */

@@ -1,9 +1,11 @@
 'use strict';
 
-const costCounter = popupReg.querySelector('.cost__counter');
-const costRange = popupReg.querySelector('.cost__range');
+import {popupReg} from '../main/main';
 
-function substitutionValueRange() {
+export function substitutionValueRange() {
+    const costCounter = popupReg.querySelector('.cost__counter');
+    const costRange = popupReg.querySelector('.cost__range');
+
     costCounter.innerHTML = costRange.value;
 
     costRange.addEventListener('input', function() {
@@ -12,4 +14,3 @@ function substitutionValueRange() {
     });
 }
 
-substitutionValueRange();

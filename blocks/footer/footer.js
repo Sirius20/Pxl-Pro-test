@@ -1,12 +1,15 @@
 'use strict';
 
-const popupButton = popupReg.querySelector('.popup-reg__submit');
-const popupLoad = popupReg.querySelector('.popup-reg__loading');
-const popupForm = popupReg.querySelector('form');
+import {popupReg} from '../main/main';
 
-function popupFormSubmit() {
+export function popupFormSubmit() {
+    const popupButton = popupReg.querySelector('.popup-reg__submit');
+    const popupLoad = popupReg.querySelector('.popup-reg__loading');
+    const popupForm = popupReg.querySelector('form');
+
     function thanksShowPopup() {
         popupReg.innerHTML = `
+            <div class="popup-reg__close outline-none" tabindex="1"></div>
             <div class="popupThanks">
                 <p class="h1">Спасибо за заявку</p>
                 <p>Мы свяжемся с вами в ближайшее время</p>
@@ -21,5 +24,3 @@ function popupFormSubmit() {
         setTimeout(thanksShowPopup, 3000);
     });
 }
-
-popupFormSubmit();
