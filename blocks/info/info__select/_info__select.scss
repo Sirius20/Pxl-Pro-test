@@ -1,0 +1,120 @@
+.info__select {
+    position: relative;
+    border-bottom: 1px solid transparentize($colorText, 0.7);
+
+    .info__select__title {
+        padding-bottom: 12px;
+    }
+
+    .info__select__choice {
+        display: none;
+        height: 50px;
+        padding-top: 6px;
+        font-size: inherit;
+        color: $colorText;
+        cursor: pointer;
+    }
+    
+    &[data-state="active"] {
+        .info__select__title {
+            &::before {
+                transform: translate(-3px, -50%) rotate(-45deg);
+            }
+    
+            &::after {
+                transform: translate(3px, -50%) rotate(45deg);
+            }
+        }
+        
+        .info__select__content {
+            display: flex;
+        }
+    }
+
+    .info__select__title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 2px;
+        
+            display: block;
+            width: 8px;
+            height: 1px;
+            
+            background-color: $colorText;
+            transition: all 0.3s ease-out;
+            transform: translate(-3px, -50%) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(3px, -50%) rotate(-45deg);
+        }
+    
+        &:hover {
+            border-color: $colorText;
+    
+            &::before,
+            &::after {
+                background-color: $colorText;
+            }
+        }
+    }
+
+    .info__select__content {
+        position: absolute;
+        bottom: -280px;
+        left: 0;
+
+        display: none;
+        flex-direction: column;
+        height: 272px;
+        width: 100%;
+
+        background-color: transparentize($colorBG, 0.5);
+        border-radius: 8px;
+        overflow-y: scroll;
+        transition: all 0.3s ease-out;
+    
+        .info__select__input {
+            display: none;
+        
+            &:checked + label {
+                color: transparentize($colorText, 0.8);
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color:  $colorBG;
+            border-radius: 8px;
+        }
+    }
+
+    .info__select__label {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        padding: 16px;
+        color: transparentize($colorText, 0.5);
+        
+        transition: all 0.2s ease-out;
+        cursor: pointer;
+    
+        &:hover {
+            color: $colorText;
+        }
+    }
+}

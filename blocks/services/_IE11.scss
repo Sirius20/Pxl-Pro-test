@@ -1,0 +1,11 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .blue-top,
+    .blue-bottom,
+    .violet {
+        display: none;
+    }
+
+    legend {
+        color: transparentize($colorText, 0.5);
+    }
+}

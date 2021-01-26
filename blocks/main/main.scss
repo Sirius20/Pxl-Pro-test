@@ -1,0 +1,163 @@
+@import "../services/varaibles";
+@import "../services/IE11";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font: {
+        family: 'Mabry Pro', Arial, sans-serif;
+        size: 24px;
+        weight: 100;
+    }
+    line-height: 32px;
+    color: $colorText;
+    background-color: transparentize($colorBG, 0.3);
+
+    .blue-top {
+        @include blur(432px, 438px, $blurBlue, 250px);
+        left: 25%;
+        top: 100px;
+        transform: matrix(0.87, 0.5, 0.5, -0.87, 0, 0);
+    }
+
+    .violet {
+        @include blur(544px, 541px, $blurViolet, 250px);
+        left: 50%;
+        top: 40%;
+        transform: rotate(47deg);
+    }
+
+    .blue-bottom {
+        @include blur(432px, 438px, $blurBlue, 250px);
+        left: 25%;
+        bottom: -100px;
+        transform: matrix(-0.87, -0.5, -0.5, 0.87, 0, 0);
+    }
+}
+
+.popup-reg {
+    position: relative;
+    width: 720px;
+    margin: 80px auto;
+    padding: 70px;
+    padding-bottom: 86px;
+    color: transparentize($colorText, 0.5);
+    background-color: $colorPopup;
+    border-radius: 16px;
+
+    .h1 {
+        font: {
+            size: 48px;
+            weight: 900;
+        }
+        margin-top: 0;
+        margin-bottom: 75px;
+        color: $colorText;
+    }
+
+    .popup-reg__close {
+        position: relative;
+        top: -30px;
+        left: calc(100% + 10px);
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        outline-color: $colorText;
+        cursor: pointer;
+
+        &::after,
+        &::before {
+            position: absolute;
+            content: "";
+            top: -7px;
+            left: 14px;
+            width: 2px;
+            height: 39.6px;
+            background-color: #9E9DAC;
+            transform: rotate(45deg);
+            transition: all 0.3s ease;
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            &::after,
+            &::before {
+                background-color: $colorText;
+            }
+        }
+    }
+
+    fieldset {
+        margin: 0;
+        padding: 0;
+        border: none;
+
+        legend {
+            margin: 0;
+            margin-bottom: 21px;
+            padding: 0;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        input:invalid {
+            color: $colorElement;
+        }
+    }
+
+    .popupThanks {
+        .h1 {
+            margin-bottom: 50px;
+        }
+
+        p {
+            margin: 0;
+            margin-bottom: 62px;
+            color: $colorText;
+        }
+    }
+
+    .masterClass,
+    .time,
+    .cost {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 35px;
+
+        div {
+            margin-bottom: 16px;
+            color: transparentize($colorText, 0.7);
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        input:checked + label {
+            color: $colorText;
+        }
+    }
+
+    .time,
+    .format {
+        margin-bottom: 46px;
+    }
+    
+    .cost {
+        margin-bottom: 63px;
+    }
+}
+
+@import "../info/info";
+@import "../info/info__select/info__select";
+@import "../masterClass/masterClass";
+@import "../time/time";
+@import "../format/format";
+@import "../cost/cost";
+@import "../footer/footer";

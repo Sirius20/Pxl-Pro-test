@@ -1,0 +1,53 @@
+.format {
+    .format__label {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+    }
+      
+    input {
+        display: none;
+    }
+
+    .format__choice {
+        color: $colorText;
+    }
+    
+    .format__slider {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 24px;
+        margin: 0 16px;
+
+        background-color: inherit;
+        border: 1px solid $colorElement;
+        border-radius: 12px;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    
+    .format__slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 19px;
+        bottom: 3px;
+
+        background-color: $colorElement;
+        border-radius: 50%;
+        box-shadow: 0 2px 10px 1px $colorElement;
+        transition: 0.4s;
+    }
+    
+    input:focus + .format__slider {
+        box-shadow: 0 0 1px $colorElement;
+    }
+    
+    input:checked + .format__slider:before {
+        transform: translateX(-16px);
+    }
+}

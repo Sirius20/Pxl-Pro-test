@@ -1,0 +1,101 @@
+@media (max-width: 375px) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  body .blue-top {
+    width: 249px;
+    height: 252px;
+    position: absolute;
+    background-color: #89B2FF;
+    opacity: 0.8;
+    -webkit-filter: blur(144px);
+            filter: blur(144px);
+    top: -10%;
+    left: -20%;
+  }
+  body .violet {
+    width: 313px;
+    height: 312px;
+    position: absolute;
+    background-color: #CC5EF2;
+    opacity: 0.8;
+    -webkit-filter: blur(144px);
+            filter: blur(144px);
+  }
+  body .blue-bottom {
+    width: 249px;
+    height: 252px;
+    position: absolute;
+    background-color: #89B2FF;
+    opacity: 0.8;
+    -webkit-filter: blur(144px);
+            filter: blur(144px);
+    bottom: 0;
+    left: -20%;
+  }
+  .popup-reg {
+    max-width: 344px;
+    padding: 24px;
+  }
+  .popup-reg h1 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 60px;
+  }
+  .popup-reg fieldset legend,
+  .popup-reg fieldset .popup-reg__format__label {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .popup-reg .popup-reg__close {
+    top: 0px;
+    left: calc(100% - 30px);
+  }
+  .popup-reg .popup-reg__masterClass {
+    margin-bottom: 28px;
+  }
+  .popup-reg .popup-reg__time {
+    margin-bottom: 40px;
+  }
+  .popup-reg .popup-reg__format {
+    margin-bottom: 36px;
+  }
+  .popup-reg__info .popup-reg__select,
+  .popup-reg__info .popup-reg__name,
+  .popup-reg__info .popup-reg__phone {
+    margin-bottom: 55px;
+  }
+  .popup-reg__info .popup-reg__comment {
+    margin-bottom: 28px;
+  }
+  .popup-reg__masterClass label::before,
+  .popup-reg__time label::before {
+    top: 0;
+  }
+  .popup-reg__masterClass label::after {
+    top: 48%;
+  }
+  .popup-reg__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .popup-reg__footer .popup-reg__submit {
+    margin-bottom: 28px;
+    padding: 14px 40px;
+    padding-bottom: 18px;
+    font-size: 16px;
+    line-height: 22,4px;
+  }
+  .popup-reg__footer .popup-reg__agree {
+    margin-bottom: 34px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */

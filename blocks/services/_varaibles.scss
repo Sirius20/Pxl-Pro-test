@@ -1,0 +1,45 @@
+$colorText: white;
+$colorBG: #0C0B31;
+$colorPopup: #3D3C5A;
+$colorElement: #FF7777;
+$blurBlue: #89B2FF;
+$blurViolet: #CC5EF2;
+
+
+@mixin blur($width, $height, $color, $blur) {
+    width: $width;
+    height: $height;
+    position: absolute;
+    background-color: $color;
+    opacity: 0.8;
+    filter: blur($blur);
+}
+
+@mixin blurIE($color) {
+    border-radius: 40%;
+    border: 1px solid $color;
+    box-shadow: 0 0 100px 80px $color;
+}
+
+@mixin rangeThumb($margin) {
+    width: 23px;
+    height: 23px;
+    margin-top: $margin;
+    background-color: $colorElement;
+    border: 1px solid $colorElement;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px 1px $colorElement;
+}
+
+@mixin rangeTrack {
+    height: 1px;
+    background-color: transparentize($colorText, 0.7);
+}
+
+@mixin rangeProgress {
+    height: 3px;
+    background-color: $colorElement;
+    border: 1px solid $colorElement;
+    border-radius: 3px;
+    box-shadow: 0 2px 10px 1px $colorElement;
+}

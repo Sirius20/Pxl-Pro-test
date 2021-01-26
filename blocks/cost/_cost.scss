@@ -1,0 +1,65 @@
+.cost {
+    legend {
+        margin-bottom: 10px;
+    }
+
+    label {
+        margin-bottom: 13px;
+        color: $colorText;
+    }
+
+    .cost__range {
+        appearance: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .cost__range::-webkit-slider-thumb {
+        appearance: none;
+        box-sizing: content-box;
+        @include rangeThumb(-12.5px);
+    }
+
+    .cost__range::-moz-range-thumb {
+        @include rangeThumb(-12.5px);
+    }
+    
+    .cost__range::-ms-thumb {
+        @include rangeThumb(0);
+    }
+
+    .cost__range::-webkit-slider-runnable-track {
+        @include rangeTrack;
+    }
+
+    .cost__range::-moz-range-track {
+        @include rangeTrack;
+    }
+
+    .cost__range::-ms-track {
+        width: 100%;
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+        border-width: 16px 0;
+    }
+
+    .cost__range::-moz-range-progress  {
+        @include rangeProgress;
+    }
+
+    .cost__range::-ms-fill-lower {
+        @include rangeProgress;
+    }
+
+    .cost__range::-ms-fill-upper {
+        @include rangeTrack;
+    }
+
+    .cost__range::-ms-tooltip {
+        display: none;
+    }
+}

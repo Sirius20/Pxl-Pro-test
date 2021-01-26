@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/blocks/font/fonts.css">
+    <link rel="stylesheet" href="/blocks/main/main.css">
+    <link rel="stylesheet" href="/blocks/mobile/mobile.css">
+</head>
+<body>
+    <div class="blue-top"></div>
+    <div class="violet"></div>
+    <div class="blue-bottom"></div>
+
+    <div class="popup-reg">
+        <div class="popup-reg__close outline-none" tabindex="1"></div>
+        <h1 class="h1">Регистрация</h1>
+        <form action="" method="post" name="registration">
+            <fieldset class="info">
+                <div class="info__select outline-none" data-state="" tabindex="0">
+                    <div class="info__select__title" data-default="city">Город</div>
+                    <div class="info__select__choice"></div>
+                    <div class="info__select__content">
+                    </div>
+                </div>
+
+                <div class="info__name">
+                    <label class="info__title" for="name">Имя Фамилия</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+
+                <div class="info__phone">
+                    <label class="info__title" for="phone">Телефон</label>
+                    <input type="tel" name="phone" id="phone" required>
+                </div>
+
+                <div class="info__comment">
+                    <label class="info__title" for="comment">Комментарий</label>
+                    <textarea rows="3" name="comment" id="comment"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset class="masterClass">
+                <legend>Мастер-класс</legend>
+                <div>
+                    <input type="radio" value="econom" name="masterClass" id="econom">
+                    <label class="outline-none" tabindex="0" for="econom">Экономия на онлайн-шопинге</label>
+                </div>
+
+                <div>
+                    <input type="radio" value="masterClass" name="masterClass" id="masterClass">
+                    <label class="outline-none" tabindex="0" for="masterClass">Мастер-класс</label>
+                </div>
+
+                <div>
+                    <input type="radio" value="theBest" name="masterClass" id="theBest">
+                    <label class="outline-none" tabindex="0" for="theBest">Лучшие площадки</label>
+                </div>
+
+                <div>
+                    <input type="radio" value="masterClass2" name="masterClass" id="masterClass2">
+                    <label class="outline-none" tabindex="0" for="masterClass2">Мастер-класс</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="time">
+                <legend>Мастер-класс</legend>
+
+                <div>
+                    <input type="checkbox" name="noon" id="noon">
+                    <label class="outline-none" tabindex="0" for="noon">12:00 – 14:00</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="afternoon" id="afternoon">
+                    <label class="outline-none" tabindex="0" for="afternoon">15:00 – 17:00</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="evening" id="evening">
+                    <label class="outline-none" tabindex="0" for="evening">19:00 – 21:00</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="format">
+                <label class="format__label">
+                    <span class="format__on format__choice">Онлайн</span> <input type="checkbox" checked> 
+                    <span tabindex="0" class="format__slider outline-none"></span> <span class="format__off">Офлайн</span>
+                </label>
+            </fieldset>
+
+            <fieldset class="cost">
+                <legend>Сколько вы готовы заплатить за мероприятие?</legend>
+                <label for="cost"><span class="cost__counter">0</span> ₽
+                </label>
+                <input tabindex="0" class="cost__range outline-none" type="range" id="cost" name="cost" min="0" max="10000" step="100" value="0">
+            </fieldset>
+
+            <div class="popup-reg__footer">
+                <button type="submit" class="popup-reg__submit outline-none">Отправить</button>
+                <div>
+                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" >
+                        <g class="popup-reg__loading">
+                            <path d="M31 17C31 24.732 24.732 31 17 31C9.26801 31 3 24.732 3 17C3 9.26801 9.26801 3 17 3" stroke="#FF7777" stroke-width="6" stroke-linecap="round"/>
+                            <animateTransform  attributeName="transform" type="rotate" from="360" to="0" keyTimes="0;1" dur="1s" begin="-0.9166666666666666s" repeatCount="indefinite" />
+                        </g>
+                    </svg>
+                </div>
+                <p class="popup-reg__agree">Нажимая на кнопку, вы соглашаетесь <br> с <a href="#">Политикой обработки персональных данных</a></p>
+            </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

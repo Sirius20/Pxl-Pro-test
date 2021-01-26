@@ -1,0 +1,107 @@
+@import "./varaibles";
+
+@media (max-width: 375px) {
+    body {
+        font-size: 16px;
+        line-height: 24px;
+
+        .blue-top {
+            @include blur(249px, 252px, $blurBlue, 144px);
+            top: -10%;
+            left: -20%;
+        }
+
+        .violet {
+            @include blur(313px, 312px, $blurViolet, 144px);
+        }
+
+        .blue-bottom {
+            @include blur(249px, 252px, $blurBlue, 144px);
+            bottom: 0;
+            left: -20%;
+        }
+    }
+
+    .popup-reg {
+        max-width: 344px;
+        padding: 24px;
+
+        h1 {
+            font: {
+                size: 32px;
+                weight: 900;
+            }
+            margin-bottom: 60px;
+        }
+        fieldset {
+            legend,
+            .popup-reg__format__label {
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+
+        .popup-reg__close {
+            top: 0px;
+            left: calc(100% - 30px);
+        }
+
+        .popup-reg__masterClass {
+            margin-bottom: 28px;
+        }
+
+        .popup-reg__time {
+            margin-bottom: 40px;
+        }
+
+        .popup-reg__format {
+            margin-bottom: 36px;
+        }
+    }
+
+    .popup-reg__info {
+        .popup-reg__select,
+        .popup-reg__name,
+        .popup-reg__phone {
+            margin-bottom: 55px;
+        }
+
+        .popup-reg__comment {
+            margin-bottom: 28px;
+        }
+    }
+
+    .popup-reg__masterClass,
+    .popup-reg__time {
+        label {
+            &::before {
+                top: 0;
+            }
+        }
+    }
+
+    .popup-reg__masterClass {
+        label::after {
+            top: 48%;
+        }
+    }
+
+    .popup-reg__footer {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .popup-reg__submit {
+            margin-bottom: 28px;
+            padding: 14px 40px;
+            padding-bottom: 18px;
+            font-size: 16px;
+            line-height: 22,4px;
+        }
+
+        .popup-reg__agree {
+            margin-bottom: 34px;
+            font-size: 12px;
+            line-height: 16px; 
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.masterClass {
+    input {
+        display: none;
+
+        &:checked+label::before {
+            background-color: $colorElement;
+            box-shadow: 0 2px 10px 1px $colorElement;
+        }
+
+        &:checked+label::after {
+            position: absolute;
+            content: "";
+            display: block;
+        }
+    }
+
+    label {
+        position: relative;
+        margin-left: 40px;
+        cursor: pointer;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 12%;
+            left: -40px;
+            width: 24px;
+            height: 24px;
+            border: 1px solid $colorElement;
+            border-radius: 50%;
+        }
+
+        &::after {
+            display: none;
+            top: 44%;
+            left: -29px;
+            width: 4px;
+            height: 4px;
+            background-color: $colorText;
+            border-radius: 50%;
+        }
+    }
+}
