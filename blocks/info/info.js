@@ -40,22 +40,22 @@ export function info() {
             }
         });
 
-        infoPhone.addEventListener('input', () => {
-            
-        });
-
         infoPhone.addEventListener('change', () => {
+            inp.setCustomValidity('');
+            let validPhone = inp.value.replace(/\D/g, '').substring(1, 11);
+            validPhone = validPhone != '' ? validPhone.slice(0, 3) + ' ' + validPhone.slice(3, 6) + '-' + validPhone.slice(6, 8) + '-' + validPhone.slice(8, 10) : '';
+            inp.value = '+7 ' + validPhone;
+
             if (inp.value.length < 16) {
                 inp.setCustomValidity('Введены не все символы');
                 inp.style.color = "#FF7777";
                 inp.style.borderColor = "#FF7777";
             } else {
-                inp.setCustomValidity('');
+                inp.setCustomValidity('Введены не все символы');
+                inp.style.color = "white";
+                inp.style.borderColor = "rgba(255, 255, 255, 0.3)";
             }
-            
-            let validPhone = inp.value.replace(/\D/g, '').substring(1, 11);
-            validPhone = validPhone != '' ? validPhone.slice(0, 3) + ' ' + validPhone.slice(3, 6) + '-' + validPhone.slice(6, 8) + '-' + validPhone.slice(8, 10) : '';
-            inp.value = '+7 ' + validPhone;
+        
         });
     }
 
