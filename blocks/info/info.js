@@ -51,11 +51,10 @@ export function info() {
                 inp.style.color = "#FF7777";
                 inp.style.borderColor = "#FF7777";
             } else {
-                inp.setCustomValidity('Введены не все символы');
+                inp.setCustomValidity('');
                 inp.style.color = "white";
                 inp.style.borderColor = "rgba(255, 255, 255, 0.3)";
             }
-        
         });
     }
 
