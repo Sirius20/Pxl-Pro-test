@@ -1,0 +1,31 @@
+.button {
+    padding: 15px 56px 18px;
+    font: {
+        family: inherit;
+        size: 18px;
+    }
+    line-height: 25.2px;
+    color: $colorElement;
+    background-color: transparent;
+    border: 1px solid $colorElement;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+        color: $darkColorElement;
+        border: 1px solid $darkColorElement;
+    }
+}
+
+.button_red {
+    color: $colorText;
+    background-color: $colorElement;
+    box-shadow: 0px 10px 30px transparentize($colorElement, 0.4);
+
+    &:hover {
+        color: $colorText;
+        border: 1px solid $darkColorElement;
+        background-color: $darkColorElement;
+        box-shadow: 0px 10px 30px transparentize($colorElement, 0.4);
+    }
+}

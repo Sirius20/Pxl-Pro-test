@@ -1,0 +1,24 @@
+$colorText: white;
+$colorBG: #0C0B31;
+$colorPopup: #3D3C5A;
+$colorElement: #FF7777;
+$darkColorElement: #FF5757;
+$blurBlue: #89B2FF;
+$blurViolet: #CC5EF2;
+
+
+@mixin blur($width, $height, $color, $blur) {
+    position: absolute;
+    width: $width;
+    height: $height;
+    z-index: -1;
+    background-color: $color;
+    opacity: 0.8;
+    filter: blur($blur);
+}
+
+@mixin blurIE($color) {
+    border-radius: 40%;
+    border: 1px solid $color;
+    box-shadow: 0 0 100px 80px $color;
+}

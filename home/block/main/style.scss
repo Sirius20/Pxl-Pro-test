@@ -1,0 +1,75 @@
+@import "../services/varaibles";
+@import "./navigation/navigation";
+@import "../header/header";
+@import "./promotion-images/promotion-images";
+@import "../button/button";
+@import "../description/description";
+@import "../masterClasses/masterClasses";
+@import "../gallery/gallery";
+@import "../footer/footer";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 1920px;
+    margin: 0;
+    padding: 0;
+    font: {
+        family: 'Mabry Pro', Arial, sans-serif;
+        size: 24px;
+        weight: 100;
+    }
+    line-height: 32px;
+    color: $colorText;
+    background-color: $colorBG;
+    z-index: 10;
+    overflow-x: hidden;
+}
+
+a {
+    color: $colorText;
+    text-decoration:  none;
+}
+
+h1 {
+    margin: 0 0 28px -3px;
+    font: {
+        size: 64px;
+        weight: 900;
+    }
+    line-height: 80px;
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 82px;
+    font: {
+        size: 48px;
+        weight: 900;
+    }
+    line-height: 56px;
+}
+
+
+h3 {
+    margin: 0;
+    margin-bottom: 22px;
+    font: {
+        size: 32px;
+        weight: 700;
+    }
+    line-height: 40px;
+}
+
+.container_max {
+    width: 1488px; 
+    margin: 0 auto;
+}
+
+.container_min {
+    width: 1232px;
+    margin: 0 auto;
+}

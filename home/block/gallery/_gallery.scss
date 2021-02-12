@@ -1,0 +1,36 @@
+.gallery {
+    position: relative;
+    margin-bottom: 230px;
+
+    .gallery__blue {
+        @include blur(510px, 517px, $blurBlue, 150px);
+        top: 60px;
+        left: -150px;
+        transform: rotate(150deg);
+    }
+
+    .gallery__violet {
+        @include blur(448px, 445px, $blurViolet, 120px);
+        right: -100px;
+        top: 200px;
+    }
+}
+
+.gallery__wrapper {
+    display: flex;
+
+    .gallery__image {
+        margin: 0 48px 45px 0;
+        border-radius: 16px;
+        object-fit: cover;
+    }
+}
+
+.gallery__images {
+    display: flex;
+    flex-wrap: wrap;
+
+    .gallery__image:nth-child(2n) {
+        margin-right: 0;
+    }
+}

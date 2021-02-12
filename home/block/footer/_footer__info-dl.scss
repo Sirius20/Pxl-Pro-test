@@ -1,0 +1,41 @@
+.footer__info-dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: -12px;
+    margin-bottom: 69px;
+}
+
+.footer__info-wrap {
+    margin: 0 127px 42px 0;
+
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .footer__info-dt {
+        margin-bottom: 14px;
+        font-size: 16px;
+        line-height: 24px;
+        color: transparentize($colorText, 0.3);
+    }
+
+    .footer__info-dd {
+        margin: 0;
+    }
+
+    .footer__info-numbers {
+        font-size: 64px;
+        line-height: 64px;
+
+        .footer__info-decorate {
+            vertical-align: top;
+            line-height: 50px;
+        }
+    }
+
+    .footer__info-warning {
+        margin-top: 8px;
+        color: $colorElement;
+    }
+}

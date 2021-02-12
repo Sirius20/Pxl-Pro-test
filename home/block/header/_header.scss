@@ -1,0 +1,43 @@
+.header__promotion {
+    .header__promotion-descr {
+        margin: 0;
+        margin-bottom: 71px;
+    }
+
+    .header__promotion-button {
+        margin-bottom: 287px;
+    }
+}
+
+.header__info {
+    .header__info-list {
+        display: flex;
+        margin: 0;
+        margin-bottom: 277px;
+        padding: 0;
+        list-style: none;
+
+        .header__info-item {
+            position: relative;
+            margin-right: 71px;
+
+            &:last-child {
+                margin: 0;
+
+                &::after {
+                    background-color: transparent;
+                }
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 5px;
+                right: -35px;
+                width: 1px;
+                height: 26px;
+                background-color: transparentize($colorText, $amount: 0.7);
+            }
+        }
+    }
+}

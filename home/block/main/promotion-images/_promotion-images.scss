@@ -1,0 +1,28 @@
+.promotion {
+    position: absolute;
+    width: 1165px;
+    height: 1445px;
+    top: 0;
+    right: 0;
+    -webkit-clip-path: inset(auto, 0, auto, auto);
+    clip-path: inset(auto, 0, auto, auto);
+
+    .promotion__photo {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .promotion__blue {
+        @include blur(728px, 738px, $blurBlue, 250px);
+        top: 90px;
+        right: 300px;
+    }
+
+    .promotion__violet {
+        @include blur(982px, 978px, $blurViolet, 250px);
+        top: 300px;
+        right: 0px;
+        margin-right: -350px;
+    }
+}
